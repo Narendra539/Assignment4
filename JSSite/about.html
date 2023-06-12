@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Page</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		function changeSectionText(sectionId, newText) {
+			document.getElementById(sectionId).textContent = newText;
+		}
+
+		function checkValue() {
+			var inputField = document.getElementById("input-field");
+			var inputValue = inputField.value;
+			var errorMessage = document.getElementById("error-message");
+
+			if (inputValue === "OpenAI") {
+				errorMessage.style.display = "none";
+			} else {
+				errorMessage.style.display = "block";
+			}
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Welcome to About Page</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="hobby.html">Hobby</a></li>
+			<li><a href="hometown.html">Hometown</a></li>
+			<li><a href="https://www.yahoo.com">Yahoo</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<h2>This is about page</h2>
+        <main>
+            <p>Hi there, my name is <span id="name-section">Narendranath Katuri</span>. I'm a proud graduate of <span id="college-section">Narasaraopeta Engineering College</span>, where I earned my degree in Computer Science. Currently, I'm pursuing my master's degree in Computer Science at Oklahoma Christian University, and I'm living in the beautiful <span id="location-section">Kicking Bird neighborhood in Edmond, Oklahoma</span>.</p>
+            <p>I'm a seasoned Cobol developer with work experience at Cognizant. Throughout my career, I've worked on a variety of Cobol projects, using my skills and expertise to solve complex problems and create efficient, effective software solutions.</p>            
+        </main>
+          
+        <img src="cobol.jpg">
+		
+	</main>
+
+	<button onclick="changeSectionText('name-section', 'John Doe')">Change Name</button>
+	<button onclick="changeSectionText('college-section', 'Oklahoma Christian College')">Change College</button>
+	<button onclick="changeSectionText('location-section', 'Tulsa, Oklahoma')">Change Location</button>
+
+	<div>
+		<label for="input-field">Enter a value:</label>
+		<input type="text" id="input-field" required>
+		<button onclick="checkValue()">Submit</button>
+		<p id="error-message" style="display: none; color: red;">Incorrect value entered.</p>
+	</div>
+</body>
+</html>

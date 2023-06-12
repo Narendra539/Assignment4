@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Welcome to Home Page</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="about.html">About</a></li>
+			<li><a href="hobby.html">Hobby</a></li>
+			<li><a href="hometown.html">Hometown</a></li>
+			<li><a href="https://www.google.com">Google</a></li>
+		</ul>
+	</nav>
+    <main>
+        <p>Welcome to my personal website. Here you can learn more about me, my hobbies, and my hometown. Feel free to browse around and explore!</p>
+    </main>  
+	<h2>Section 1</h2>
+
+	<button class="accordion">Section 1</button>
+	<div class="panel">
+	  <p>I am an aspiring web developer with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, and JavaScript, and I'm always eager to learn and explore new technologies.</p>
+	</div>
+
+	<h2>Section 2</h2>
+
+	<button class="accordion">Section 2</button>
+	<div class="panel">
+	  <p>In my free time, I enjoy playing guitar and exploring different genres of music. Music is a big part of my life, and I find joy and inspiration in creating melodies and expressing myself through music.</p>
+	</div>
+
+	<h2>Section 3</h2>
+
+	<button class="accordion">Section 3</button>
+	<div class="panel">
+	  <p>One of my favorite pastimes is watching movies. I love immersing myself in captivating stories and memorable characters.</p>
+	</div>
+
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var panel = this.nextElementSibling;
+	    if (panel.style.display === "block") {
+	      panel.style.display = "none";
+	    } else {
+	      panel.style.display = "block";
+	    }
+	  });
+	}
+	</script>    
+</body>
+</html>
